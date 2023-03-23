@@ -21,4 +21,18 @@ public class CalculatorTest {
         System.out.println("actualResult: " + actualResult);
         Assertions.assertEquals(expectedResult,actualResult,"the sum of two integers is not correct");
     }
+
+    @Test
+    @DisplayName("Multiply two numbers integers")
+    public void  multiplyTwoNumbersIntegers(){
+        Calculator calculator1 = new Calculator();
+        int numberC = 2;
+        int numberD = 3;
+
+        int expectedResultMul = 6;
+        int actualResultMul = calculator1.multi(numberC, numberD);
+        System.out.println("expectedResult: " + expectedResultMul);
+        System.out.println("actualResult: " + actualResultMul);
+        Assertions.assertEquals(expectedResultMul, actualResultMul, "the sum of two integers is not correct");
+    }
 }
