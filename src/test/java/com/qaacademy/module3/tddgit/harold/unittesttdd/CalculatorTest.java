@@ -33,6 +33,6 @@ public class CalculatorTest {
         int actualResultMul = calculator1.multi(numberC, numberD);
         System.out.println("expectedResult: " + expectedResultMul);
         System.out.println("actualResult: " + actualResultMul);
-        Assertions.assertEquals(expectedResultMul, actualResultMul, "the sum of two integers is not correct");
+        Assertions.assertEquals(expectedResultMul, actualResultMul, "the multiply of two integers is not correct");
     }
 }
