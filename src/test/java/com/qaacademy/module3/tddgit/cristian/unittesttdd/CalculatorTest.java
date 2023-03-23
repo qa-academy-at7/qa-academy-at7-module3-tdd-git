@@ -18,9 +18,24 @@ public final class CalculatorTest {
         int numberB = 600;
         int expectedResult = 1100;
         int actualResult = calculator.sum(numberA,numberB);
-        System.out.println("Expected result: " + expectedResult);
-        System.out.println("Actual result: " + actualResult);
+        System.out.println("Expected result: ".concat(String.valueOf(expectedResult)));
+        System.out.println("Actual result: ".concat(String.valueOf(actualResult)));
 
         Assertions.assertEquals(expectedResult,actualResult, "The sum of two integers is not correct");
+    }
+
+    @Test
+    @DisplayName("Multiply two integer numbers")
+    public void multiplyOfTwoIntegers(){
+        Calculator calculator = new Calculator();
+
+        int numberA = 12;
+        int numberB = 5;
+        int expectedResult = 60;
+        int actualResult = calculator.mul(numberA,numberB);
+        System.out.println("Expected result: ".concat(String.valueOf(expectedResult)));
+        System.out.println("Actual result: ".concat(String.valueOf(actualResult)));
+
+        Assertions.assertEquals(expectedResult,actualResult, "The multiply of two integers is not correct");
     }
 }
