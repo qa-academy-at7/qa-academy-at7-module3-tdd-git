@@ -71,10 +71,11 @@ public final class CalculatorTest {
         Assertions.assertEquals(expectedResult, actualResult, "Multiply two integers is not correct");
     }
 
-    /*
     @Test
-    @DisplayName("Sum of than two integers")
-     */
+    @DisplayName("Sum more than two integers")
+    public  void sumMoreThanTwoIntegers(){
+
+    }
 
     /*
     @Test
