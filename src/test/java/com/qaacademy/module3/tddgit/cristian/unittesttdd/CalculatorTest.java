@@ -7,54 +7,68 @@ import org.junit.jupiter.api.*;
 public final class CalculatorTest {
 
     @BeforeAll
-    public static void setUpAll(){
+    public static void setUpAll() {
         System.out.println("BeforeAll - setup");
     }
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         System.out.println("BeforeEach - setup");
     }
 
     @AfterAll
-    public static void teardownAll(){
+    public static void teardownAll() {
         System.out.println("AfterAll - teardown");
     }
 
     @AfterEach
-    public void teardown(){
+    public void teardown() {
         System.out.println("AfterEach - teardown");
     }
 
 
     @Test
     @DisplayName("Sum of two integer numbers")
-    public void sumOfTwoIntegers(){
+    public void sumOfTwoIntegers() {
         Calculator calculator = new Calculator();
 
         int numberA = 500;
         int numberB = 600;
         int expectedResult = 1100;
-        int actualResult = calculator.sum(numberA,numberB);
+        int actualResult = calculator.sum(numberA, numberB);
         System.out.println("Expected result: ".concat(String.valueOf(expectedResult)));
         System.out.println("Actual result: ".concat(String.valueOf(actualResult)));
 
-        Assertions.assertEquals(expectedResult,actualResult, "The sum of two integers is not correct");
+        Assertions.assertEquals(expectedResult, actualResult, "The sum of two integers is not correct");
+    }
+
+    @Test
+    @DisplayName("Sum of more than two integers")
+    public void sumOfMultipleIntegers() {
+        Calculator calculator = new Calculator();
+
+        int[] numbers = {50,100,15};
+        int expectedResult = 165;
+        int actualResult = calculator.sumMultiple(numbers);
+
+        System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
+        System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
+        Assertions.assertEquals(expectedResult, actualResult, "The sum integers is not correct");
     }
 
     @Test
     @DisplayName("Multiply two integer numbers")
-    public void multiplyOfTwoIntegers(){
+    public void multiplyOfTwoIntegers() {
         Calculator calculator = new Calculator();
 
         int numberA = 12;
         int numberB = 5;
         int expectedResult = 60;
-        int actualResult = calculator.mul(numberA,numberB);
+        int actualResult = calculator.mul(numberA, numberB);
         System.out.println("Expected result: ".concat(String.valueOf(expectedResult)));
         System.out.println("Actual result: ".concat(String.valueOf(actualResult)));
 
-        Assertions.assertEquals(expectedResult,actualResult, "The multiply of two integers is not correct");
+        Assertions.assertEquals(expectedResult, actualResult, "The multiply of two integers is not correct");
     }
 
     @Test
@@ -62,7 +76,7 @@ public final class CalculatorTest {
     public void multiplyOfMultipleIntegers() {
         Calculator calculator = new Calculator();
 
-        int[] numbers = {1,2,3,4};
+        int[] numbers = {1, 2, 3, 4};
         int expectedResult = 24;
         int actualResult = calculator.mulMultiple(numbers);
 
@@ -83,7 +97,7 @@ public final class CalculatorTest {
         int numberA = 10;
         int numberB = 15;
         int expectedResult = -5;
-        int actualResult = calculator.subtract(numberA,numberB);
+        int actualResult = calculator.subtract(numberA, numberB);
 
         System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
         System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
@@ -103,7 +117,7 @@ public final class CalculatorTest {
         int numberA = 25;
         int numberB = 2;
         int expectedResult = 12;
-        int actualResult = calculator.divide(numberA,numberB);
+        int actualResult = calculator.divide(numberA, numberB);
 
         System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
         System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
@@ -122,7 +136,7 @@ public final class CalculatorTest {
         double numberA = -50.5;
         double numberB = -2;
         double expectedResult = 25.25;
-        double actualResult = calculator.divideReal(numberA,numberB);
+        double actualResult = calculator.divideReal(numberA, numberB);
 
         System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
         System.out.println("actualResult : ".concat(String.valueOf(actualResult)));

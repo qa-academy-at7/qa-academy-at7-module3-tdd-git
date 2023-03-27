@@ -9,6 +9,14 @@ public class Calculator {
         return numberA*numberB;
     }
 
+    public int sumMultiple(int[] numbers) {
+        int result = 0;
+        for(int x: numbers){
+            result += x;
+        }
+        return result;
+    }
+
     public int mulMultiple(int[] numbers) {
         int result = 1;
         for(int x: numbers){
