@@ -56,4 +56,76 @@ public final class CalculatorTest {
 
         Assertions.assertEquals(expectedResult,actualResult, "The multiply of two integers is not correct");
     }
+
+    @Test
+    @DisplayName("Multiply of more than two integers")
+    public void multiplyOfMultipleIntegers() {
+        Calculator calculator = new Calculator();
+
+        int[] numbers = {1,2,3,4};
+        int expectedResult = 24;
+        int actualResult = calculator.mulMultiple(numbers);
+
+        System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
+        System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
+        Assertions.assertEquals(expectedResult, actualResult, "The multiplication of multiple integers is not correct");
+    }
+
+    /*
+    @Test
+    @DisplayName("Subtract two whole numbers")
+     */
+    @Test
+    @DisplayName("Subtraction of two integers")
+    public void subtractIntegers() {
+        Calculator calculator = new Calculator();
+
+        int numberA = 10;
+        int numberB = 15;
+        int expectedResult = -5;
+        int actualResult = calculator.subtract(numberA,numberB);
+
+        System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
+        System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
+        Assertions.assertEquals(expectedResult, actualResult, "The subtract of two integers is not correct");
+    }
+
+
+    /*
+    @Test
+    @DisplayName("Divide two numbers integers")
+     */
+    @Test
+    @DisplayName("Division of two integers")
+    public void divideIntegers() {
+        Calculator calculator = new Calculator();
+
+        int numberA = 25;
+        int numberB = 2;
+        int expectedResult = 12;
+        int actualResult = calculator.divide(numberA,numberB);
+
+        System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
+        System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
+        Assertions.assertEquals(expectedResult, actualResult, "The division of two integers is not correct");
+    }
+
+    /*
+    @Test
+    @DisplayName("Divide two real numbers")
+     */
+    @Test
+    @DisplayName("Division of two integers")
+    public void divideRealNumbers() {
+        Calculator calculator = new Calculator();
+
+        double numberA = -50.5;
+        double numberB = -2;
+        double expectedResult = 25.25;
+        double actualResult = calculator.divideReal(numberA,numberB);
+
+        System.out.println("expectedResult : ".concat(String.valueOf(expectedResult)));
+        System.out.println("actualResult : ".concat(String.valueOf(actualResult)));
+        Assertions.assertEquals(expectedResult, actualResult, "The division of two real numbers is not correct");
+    }
 }
