@@ -1,13 +1,31 @@
 package com.qaacademy.module3.tddgit.cristian.unittesttdd;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 @DisplayName("Calculator")
 @Tag("UniTest")
 public final class CalculatorTest {
+
+    @BeforeAll
+    public static void setUpAll(){
+        System.out.println("BeforeAll - setup");
+    }
+
+    @BeforeEach
+    public void setup(){
+        System.out.println("BeforeEach - setup");
+    }
+
+    @AfterAll
+    public static void teardownAll(){
+        System.out.println("AfterAll - teardown");
+    }
+
+    @AfterEach
+    public void teardown(){
+        System.out.println("AfterEach - teardown");
+    }
+
 
     @Test
     @DisplayName("Sum of two integer numbers")
